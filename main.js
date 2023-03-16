@@ -22,37 +22,13 @@ let htmlBar=document.querySelector(".progress-bar.html")
 let cssBar=document.querySelector(".progress-bar.css")
 let jsBar=document.querySelector(".progress-bar.js")
 let bootBar=document.querySelector(".progress-bar.boot")
-let reactBar=document.querySelector(".progress-bar.react")
-let javaBar=document.querySelector(".progress-bar.java")
-let sqlBar=document.querySelector(".progress-bar.sql")
-let laravelBar=document.querySelector(".progress-bar.laravel")
-let apiBar=document.querySelector(".progress-bar.api")
-let dartBar=document.querySelector(".progress-bar.dart")
-let flatterBar=document.querySelector(".progress-bar.flatter")
-let googleBar=document.querySelector(".progress-bar.google")
-let tubeBar=document.querySelector(".progress-bar.tube")
-let twitterBar=document.querySelector(".progress-bar.twitter")
-let instgramBar=document.querySelector(".progress-bar.instgram")
-let faceBar=document.querySelector(".progress-bar.face")
-let indesignBar=document.querySelector(".progress-bar.indesign")
-let photoshopBar=document.querySelector(".progress-bar.photoshop")
-let xdBar=document.querySelector(".progress-bar.xd")
-let illistrationBar=document.querySelector(".progress-bar.illistration")
-let figmaBar=document.querySelector(".progress-bar.figma")
-let illistrationUBar=document.querySelector(".progress-bar.illistration-u")
-let xdUBar=document.querySelector(".progress-bar.xd-u")
-let figmaUBar=document.querySelector(".progress-bar.figma-u")
 let btns=Array.from(document.querySelectorAll(".buttons div"))
-let web=Array.from(document.querySelectorAll("#web .box img"))
-let app=Array.from(document.querySelectorAll("#app .box img"))
-let graphic=Array.from(document.querySelectorAll("#graphic .box img"))
-let social=Array.from(document.querySelectorAll("#social .box img"))
-let ui=Array.from(document.querySelectorAll("#ui .box img"))
-let mainWeb=document.querySelector("#web")
-let mainApp=document.querySelector("#app")
-let mainGraphic=document.querySelector("#graphic")
-let mainSocial=document.querySelector("#social")
-let mainUi=document.querySelector("#ui")
+let css=Array.from(document.querySelectorAll("#css .box img"))
+let js=Array.from(document.querySelectorAll("#js .box img"))
+let boot=Array.from(document.querySelectorAll("#boot .box img"))
+let mainCSS=document.querySelector("#css")
+let mainJS=document.querySelector("#js")
+let mainBoot=document.querySelector("#boot")
 let show=document.querySelector(".show")
 let hide=document.querySelector(".hide")
 let bulsContainer=document.querySelector(".bullets")
@@ -316,6 +292,8 @@ lightMood.onclick=function(){
     lightFun()
 } 
 function lightFun(){
+    firstIMG.setAttribute("src","./images/3M6A0468 copy.jpg")
+    secondIMG.setAttribute("src","./images/1234567890.png")
     document.body.style.background="#fff"
     for(let i=0;i<lightText.length;i++){
         lightText[i].classList.remove("text-light")
@@ -332,6 +310,8 @@ darkMood.onclick=function(){
     darkFun()
 } 
 function darkFun(){
+    firstIMG.setAttribute("src","./images/firstblack.jpg")
+    secondIMG.setAttribute("src","./images/secondblack.jpg")
     document.body.style.background="linear-gradient(#0B0B0B ,#070707)"
     for(let i=0;i<lightText.length;i++){
         lightText[i].classList.add("text-light")
@@ -402,150 +382,21 @@ function contactFun(){
     })
 }
 
-let skills=Array.from(document.querySelectorAll(".skills"))
-let webSkills=document.querySelector(".web-skills")
-let appSkills=document.querySelector(".app-skills")
-let graphicSkills=document.querySelector(".graphic-skills")
-let uiSkills=document.querySelector(".ui-skills")
-let socialSkills=document.querySelector(".social-skills")
 
-function skil(){
-    skills.forEach((skill)=>{
-        skill.onclick=function(){
-            for(let i=0;i<skills.length;i++){
-                skills[i].classList.remove("active")
-                skill.classList.add("active")
-                if(skills[1].classList.contains("active")){
-                    webSkills.style.display="none"
-                    appSkills.style.display="block"
-                    graphicSkills.style.display="none"
-                    socialSkills.style.display="none"
-                    uiSkills.style.display="none"
-                }
-                else if(skills[0].classList.contains("active")){
-                    webSkills.style.display="block"
-                    appSkills.style.display="none"
-                    graphicSkills.style.display="none"
-                    socialSkills.style.display="none"
-                    uiSkills.style.display="none"
-                }
-                else if(skills[2].classList.contains("active")){
-                        webSkills.style.display="none"
-                        appSkills.style.display="none"
-                        graphicSkills.style.display="block"
-                        socialSkills.style.display="none"
-                        uiSkills.style.display="none"
-                    }
-                else if(skills[3].classList.contains("active")){
-                        webSkills.style.display="none"
-                        appSkills.style.display="none"
-                        graphicSkills.style.display="none"
-                        socialSkills.style.display="block"
-                        uiSkills.style.display="none"
-                    }
-                    else if(skills[4].classList.contains("active")){
-                            webSkills.style.display="none"
-                            appSkills.style.display="none"
-                            graphicSkills.style.display="none"
-                            socialSkills.style.display="none"
-                            uiSkills.style.display="block"
-                        }    
-            }
-            // if(skill.innerHTML=="apps"){
-            //     webSkills.style.display="none"
-            //     appSkills.style.display="block"
-            //     graphicSkills.style.display="none"
-            //     socialSkills.style.display="none"
-            //     uiSkills.style.display="none"
-            // }
-            // else if(skill.innerHTML=="web"){
-            //     webSkills.style.display="block"
-            //     appSkills.style.display="none"
-            //     graphicSkills.style.display="none"
-            //     socialSkills.style.display="none"
-            //     uiSkills.style.display="none"
-            // }
-            // else if(skill.innerHTML=="graphic"){
-            //     webSkills.style.display="none"
-            //     appSkills.style.display="none"
-            //     graphicSkills.style.display="block"
-            //     socialSkills.style.display="none"
-            //     uiSkills.style.display="none"
-            // }
-            // else if(skill.innerHTML=="social"){
-            //     webSkills.style.display="none"
-            //     appSkills.style.display="none"
-            //     graphicSkills.style.display="none"
-            //     socialSkills.style.display="block"
-            //     uiSkills.style.display="none"
-            // }
-            // else if(skill.innerHTML=="UI/UX"){
-            //     webSkills.style.display="none"
-            //     appSkills.style.display="none"
-            //     graphicSkills.style.display="none"
-            //     socialSkills.style.display="none"
-            //     uiSkills.style.display="block"
-            // }
-        }
-    })
-}
 
-window.onscroll=scrol
-function scrol(){
-    skil()
+window.onscroll=function(){
     bulls()
     if(window.scrollY>aboutSection.offsetTop && window.scrollY<worksSection.offsetTop){
         htmlBar.style.width="90%"
         cssBar.style.width="85%"
         jsBar.style.width="70%"
         bootBar.style.width="90%"
-        javaBar.style.width="65%"
-        reactBar.style.width="70%"
-        sqlBar.style.width="70%"
-        apiBar.style.width="90%"
-        laravelBar.style.width="95%"
-        dartBar.style.width="90%"
-        flatterBar.style.width="80%"
-        googleBar.style.width="95%"
-        tubeBar.style.width="80%"
-        twitterBar.style.width="80%"
-        instgramBar.style.width="100%"
-        faceBar.style.width="100%"
-        indesignBar.style.width="95%"
-        photoshopBar.style.width="90%"
-        xdBar.style.width="85%"
-        illistrationBar.style.width="90%"
-        figmaBar.style.width="80%"
-        xdUBar.style.width="90%"
-        illistrationUBar.style.width="85%"
-        figmaUBar.style.width="90%"
-        
     }
     else{
         htmlBar.style.width="0%"
         cssBar.style.width="0%"
         jsBar.style.width="0%"
         bootBar.style.width="0%"
-        reactBar.style.width="0%"
-        javaBar.style.width="0%"
-        sqlBar.style.width="0%"
-        apiBar.style.width="0%"
-        laravelBar.style.width="0%"
-        dartBar.style.width="0%"
-        flatterBar.style.width="0%"
-        googleBar.style.width="0%"
-        tubeBar.style.width="0%"
-        twitterBar.style.width="0%"
-        instgramBar.style.width="0%"
-        faceBar.style.width="0%"
-        indesignBar.style.width="0%"
-        photoshopBar.style.width="0%"
-        xdBar.style.width="0%"
-        illistrationBar.style.width="0%"
-        figmaBar.style.width="0%"
-        xdUBar.style.width="0%"
-        illistrationUBar.style.width="0%"
-        figmaUBar.style.width="0%"
     }
 }
 
@@ -556,61 +407,33 @@ function scrol(){
 btns.forEach((btn)=>{
     btn.onclick=function(){
         if(btn.innerHTML=="All"){
-            mainWeb.style.display="flex" 
-            mainApp.style.display="flex"  
-            mainGraphic.style.display="flex" 
-            mainSocial.style.display="flex" 
-            mainUi.style.display="flex" 
+            mainCSS.style.display="flex" 
+            mainJS.style.display="flex" 
+            mainBoot.style.display="flex" 
             let active=btns.find((e)=>e.classList.contains("active"))
             active.classList.remove("active")
             btn.classList.add("active")
         }
-        else if(btn.classList.contains("web")){
-            mainWeb.style.display="flex" 
-            mainApp.style.display="none"  
-            mainGraphic.style.display="none" 
-            mainSocial.style.display="none" 
-            mainUi.style.display="none" 
+        else if(btn.classList.contains("cs")){
+            mainCSS.style.display="flex" 
+            mainJS.style.display="none" 
+            mainBoot.style.display="none" 
             let active=btns.find((e)=>e.classList.contains("active"))
             active.classList.remove("active")
             btn.classList.add("active")
         }
-        else if(btn.classList.contains("app")){
-            mainWeb.style.display="none" 
-            mainApp.style.display="flex"  
-            mainGraphic.style.display="none" 
-            mainSocial.style.display="none" 
-            mainUi.style.display="none"
+        else if(btn.classList.contains("j")){
+            mainCSS.style.display="none" 
+            mainJS.style.display="flex" 
+            mainBoot.style.display="none" 
             let active=btns.find((e)=>e.classList.contains("active"))
             active.classList.remove("active")
             btn.classList.add("active")
         }
-        else if(btn.classList.contains("graphic")){
-            mainWeb.style.display="none" 
-            mainApp.style.display="none"  
-            mainGraphic.style.display="flex" 
-            mainSocial.style.display="none" 
-            mainUi.style.display="none"
-            let active=btns.find((e)=>e.classList.contains("active"))
-            active.classList.remove("active")
-            btn.classList.add("active")
-        }
-        else if(btn.classList.contains("social")){
-            mainWeb.style.display="none" 
-            mainApp.style.display="none"  
-            mainGraphic.style.display="none" 
-            mainSocial.style.display="flex" 
-            mainUi.style.display="none"
-            let active=btns.find((e)=>e.classList.contains("active"))
-            active.classList.remove("active")
-            btn.classList.add("active")
-        }
-        else if(btn.classList.contains("ui")){
-            mainWeb.style.display="none" 
-            mainApp.style.display="none"  
-            mainGraphic.style.display="none" 
-            mainSocial.style.display="none" 
-            mainUi.style.display="flex"
+        else if(btn.innerHTML=="BOOTSTRAP"){
+            mainCSS.style.display="none" 
+            mainJS.style.display="none" 
+            mainBoot.style.display="flex" 
             let active=btns.find((e)=>e.classList.contains("active"))
             active.classList.remove("active")
             btn.classList.add("active")
@@ -647,68 +470,5 @@ function bulls(){
     }
 }
 
-function showImg(num){
-   let div= document.createElement("div")
-   div.classList.add("over")
-   let img=document.createElement("img")
-   img.setAttribute("src",`./images/app/app${num}.jpeg`)
-   let text=document.createElement("div")
-   text.classList.add("text")
-   let texttext=document.createTextNode("X")
-   text.appendChild(texttext)
-   div.appendChild(text)
-   div.appendChild(img)
-   document.body.appendChild(div)
-    text.onclick=function(){
-        div.remove()
-    }
-}
-function showgraphic(num){
-   let div= document.createElement("div")
-   div.classList.add("over")
-   let img=document.createElement("img")
-   img.setAttribute("src",`./images/graphic/${num}.jpeg`)
-   let text=document.createElement("div")
-   text.classList.add("text")
-   let texttext=document.createTextNode("X")
-   text.appendChild(texttext)
-   div.appendChild(text)
-   div.appendChild(img)
-   document.body.appendChild(div)
-    text.onclick=function(){
-        div.remove()
-    }
-}
-function showsocial(num){
-   let div= document.createElement("div")
-   div.classList.add("over")
-   let img=document.createElement("img")
-   img.setAttribute("src",`./images/social/${num}.jpeg`)
-   let text=document.createElement("div")
-   text.classList.add("text")
-   let texttext=document.createTextNode("X")
-   text.appendChild(texttext)
-   div.appendChild(text)
-   div.appendChild(img)
-   document.body.appendChild(div)
-    text.onclick=function(){
-        div.remove()
-    }
-}
-function showui(num){
-   let div= document.createElement("div")
-   div.classList.add("over")
-   let img=document.createElement("img")
-   img.setAttribute("src",`./images/ui/${num}.jpeg`)
-   let text=document.createElement("div")
-   text.classList.add("text")
-   let texttext=document.createTextNode("X")
-   text.appendChild(texttext)
-   div.appendChild(text)
-   div.appendChild(img)
-   document.body.appendChild(div)
-    text.onclick=function(){
-        div.remove()
-    }
-}
+
 

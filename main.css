@@ -115,20 +115,14 @@ body{
 .header nav{
     z-index: 300;
 }
-.skills:hover{
-    cursor: pointer;
-}
-.ui-skills ,.app-skills,.graphic-skills,.social-skills ,#app ,#graphic,#ui,#social{
-    display: none;
-}
-.header nav ul li a:hover , .skills:hover{
+.header nav ul li a:hover{
     color: var(--main-color);
     scale: 1.1;
 }
 #x{
     margin-left: 20%;
 }
-#x li a::after, .skills::after{
+#x li a::after{
     content: "";
     height: 3px;
     background-color: var(--main-color);
@@ -137,10 +131,7 @@ body{
     transition:width .5s ;
     display: block;
 }
-.skills.active::after{
-    width: 100%;
-}
-#x li a:hover::after, .skills:hover::after{
+#x li a:hover::after{
     width: 100%;
 }
 #brand{
@@ -166,7 +157,7 @@ body{
 .progress,.progress-bar{
     border-radius:20px;
 }
-.progress-bar.html,.progress-bar.css,.progress-bar.js,.progress-bar.boot,.progress-bar.react{
+.progress-bar.html,.progress-bar.css,.progress-bar.js,.progress-bar.boot{
     transition: all 0.9s;
     width: 0%;
 }
@@ -174,9 +165,6 @@ body{
     height: 200px;
     margin-bottom: 10px;
     cursor: pointer;
-}
-.box img{
-    height: 100%;
 }
 .overlay{
     position: absolute;
@@ -232,33 +220,4 @@ body{
 }
 .yellow-bg{
     background-color: #ffd700;
-}
-.over{
-    background-color: rgba(0, 0, 0, 0.185);
-    text-align: center;
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-.over img{
-    height: 90%;
-    transform: translateY(15%);
-}
-@media (max-width:560px) {
-    .over img{
-        width: 90%;
-    }
-}
-.over .text{
-
-    color:var(--main-color);
-    z-index: 10000;
-    position: absolute;
-    left: 59%;
-    font-size: 50px;
-    top: 7%;
-    cursor: pointer;
 }
